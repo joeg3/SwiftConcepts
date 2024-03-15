@@ -1,36 +1,35 @@
-//
-//  SwiftConceptsTests.swift
-//  SwiftConceptsTests
-//
-//  Created by Joseph Gliniecki on 3/15/24.
-//
+import XCTest // Used for all unit testing
+@testable import SwiftConcepts // This imports our swift-concepts project code into the test
 
-import XCTest
-@testable import SwiftConcepts
-
-final class SwiftConceptsTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
+final class SwiftConceptsTests: XCTestCase { // XCTestCase is the class used for unit testing
+  
+  var basics: Basics! // The ! force unwraps the class
+  
+  override func setUp() { // Runs before each test method
+    basics = Basics()
+  }
+  
+  override func tearDown() { // Runs after each test method
+    basics = nil
+  }
+  
+  func testAddTenWorks() { // Unit test methods must start with word test to be picked up by test runner
+    // Given
+    var expected: Int = 0
+    
+    // When
+    expected = basics.addTen(number: 9)
+    
+    // Then
+    XCTAssert(expected == 19, "This should be 10")
+    XCTAssertTrue(expected == 19)
+    XCTAssertEqual(expected, 19, "Passing 9 to function should return 19")
+  }
+  
+  func testBeSquareSucceeds() {
+    var expected = basics.beSquare(7)
+    XCTAssertEqual(expected, 49)
+  }
 
 }
+

@@ -14,6 +14,7 @@
 		D854CC502BA4C6370076E2E1 /* SwiftConceptsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D854CC4F2BA4C6370076E2E1 /* SwiftConceptsTests.swift */; };
 		D854CC5A2BA4C6370076E2E1 /* SwiftConceptsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D854CC592BA4C6370076E2E1 /* SwiftConceptsUITests.swift */; };
 		D854CC5C2BA4C6370076E2E1 /* SwiftConceptsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D854CC5B2BA4C6370076E2E1 /* SwiftConceptsUITestsLaunchTests.swift */; };
+		D854CC6A2BA4CAF40076E2E1 /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D854CC692BA4CAF40076E2E1 /* Basics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		D854CC592BA4C6370076E2E1 /* SwiftConceptsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConceptsUITests.swift; sourceTree = "<group>"; };
 		D854CC5B2BA4C6370076E2E1 /* SwiftConceptsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftConceptsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D854CC682BA4C99C0076E2E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D854CC692BA4CAF40076E2E1 /* Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				D854CC402BA4C6360076E2E1 /* ContentView.swift */,
 				D854CC422BA4C6370076E2E1 /* Assets.xcassets */,
 				D854CC442BA4C6370076E2E1 /* Preview Content */,
+				D854CC692BA4CAF40076E2E1 /* Basics.swift */,
 			);
 			path = SwiftConcepts;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D854CC6A2BA4CAF40076E2E1 /* Basics.swift in Sources */,
 				D854CC412BA4C6360076E2E1 /* ContentView.swift in Sources */,
 				D854CC3F2BA4C6360076E2E1 /* SwiftConceptsApp.swift in Sources */,
 			);
