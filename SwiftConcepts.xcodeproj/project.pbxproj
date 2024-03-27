@@ -16,6 +16,8 @@
 		D854CC5C2BA4C6370076E2E1 /* SwiftConceptsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D854CC5B2BA4C6370076E2E1 /* SwiftConceptsUITestsLaunchTests.swift */; };
 		D854CC6A2BA4CAF40076E2E1 /* Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D854CC692BA4CAF40076E2E1 /* Basics.swift */; };
 		D854CC6C2BA4E4210076E2E1 /* BasicsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D854CC6B2BA4E4210076E2E1 /* BasicsTests.swift */; };
+		D854CC6E2BA8C9310076E2E1 /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = D854CC6D2BA8C9310076E2E1 /* Structures.swift */; };
+		D86FA3A32BB4958A00BEBF11 /* StringsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86FA3A22BB4958A00BEBF11 /* StringsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		D854CC682BA4C99C0076E2E1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D854CC692BA4CAF40076E2E1 /* Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basics.swift; sourceTree = "<group>"; };
 		D854CC6B2BA4E4210076E2E1 /* BasicsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicsTests.swift; sourceTree = "<group>"; };
+		D854CC6D2BA8C9310076E2E1 /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
+		D86FA3A22BB4958A00BEBF11 /* StringsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 			children = (
 				D854CC4F2BA4C6370076E2E1 /* SwiftConceptsTests.swift */,
 				D854CC6B2BA4E4210076E2E1 /* BasicsTests.swift */,
+				D854CC6D2BA8C9310076E2E1 /* Structures.swift */,
+				D86FA3A22BB4958A00BEBF11 /* StringsTests.swift */,
 			);
 			path = SwiftConceptsTests;
 			sourceTree = "<group>";
@@ -276,6 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D854CC6C2BA4E4210076E2E1 /* BasicsTests.swift in Sources */,
+				D854CC6E2BA8C9310076E2E1 /* Structures.swift in Sources */,
+				D86FA3A32BB4958A00BEBF11 /* StringsTests.swift in Sources */,
 				D854CC502BA4C6370076E2E1 /* SwiftConceptsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,16 +1,12 @@
 import XCTest // Used for all unit testing
-@testable import SwiftConcepts // This imports our swift-concepts project code into the test
+@testable import SwiftConcepts // This imports our SwiftConcepts project code into the test
 
 final class BasicsTests: XCTestCase { // XCTestCase is the class used for unit testing
   
-  var basics: Basics! // The ! force unwraps the class
-  
   override func setUp() { // Runs before each test method
-    basics = Basics()
   }
   
   override func tearDown() { // Runs after each test method
-    basics = nil
   }
   
   func testConstantsAndVariables() {
