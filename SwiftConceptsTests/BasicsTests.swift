@@ -9,6 +9,13 @@ final class BasicsTests: XCTestCase { // XCTestCase is the class used for unit t
   override func tearDown() { // Runs after each test method
   }
   
+  func testPrint() {
+    // If you don't want new lines
+    for _ in 0...3 { // Prints hi 4 times
+      print("hi, ", terminator: "") // no newline
+    }
+  }
+  
   func testConstantsAndVariables() {
     var greeting: String = "Hello, playground" // Variable
     let myName: String = "Joe"                 // Constant
@@ -63,7 +70,7 @@ final class BasicsTests: XCTestCase { // XCTestCase is the class used for unit t
     // Reference data in tuple by position
     let x1 = coord1.0
     let y1 = coord1.1
-    XCTAssertEqual(coord3.0, 8)
+    XCTAssertEqual(coord2.0, 8)
     XCTAssertEqual(coord3.1, 9.1)
 
     // Use labels for tuple data and retrieval (best practice)
@@ -83,6 +90,22 @@ final class BasicsTests: XCTestCase { // XCTestCase is the class used for unit t
     let coords: Coordinates = (4, 5)
   }
   
+  // ***************************************** Booleans ***************************************
+  
+  func testBooleanOperators() {
+    XCTAssertTrue((3 == 3))
+    XCTAssertTrue((4 != 5))
+    XCTAssertFalse((6 > 7))
+    XCTAssertTrue((8 < 9))
+    XCTAssertFalse((6 >= 7))
+    XCTAssertTrue((8 <= 9))
+  }
+  
+  func testToggleBool() {
+    var state = true
+    state.toggle() // state now false
+    XCTAssertFalse(state)
+  }
 
 }
 

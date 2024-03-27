@@ -55,4 +55,11 @@ final class StringsTests: XCTestCase { // XCTestCase is the class used for unit 
     XCTAssertEqual(myCode, "let a = 5\nlet b = 2\nvar c = a + b")
   }
   
+  func testStringEquality() {
+    let word = "tree"
+    let check = word == "rock"
+    let alphpbeticalOrder = "rock" < "tree" // Returns true, rock comes before tree
+    XCTAssertTrue(alphpbeticalOrder)
+  }
+  
 }
