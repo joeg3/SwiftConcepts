@@ -1,5 +1,5 @@
 import XCTest // Used for all unit testing
-@testable import SwiftBasics // This imports our SwiftBasics project code so we can test it
+@testable import SwiftConcepts // This imports our SwiftBasics project code so we can test it
 
 final class BasicsTests: XCTestCase { // XCTestCase is the class used for unit testing
   
