@@ -1,49 +1,53 @@
-import XCTest // Used for all unit testing
-//@testable import SwiftConcepts // This imports our SwiftConcepts project code into the test
+import XCTest  // Used for all unit testing
 
-final class DictionaryTests: XCTestCase { // XCTestCase is the class used for unit testing
-  
-  // Dictionary keys must be unique
-  // Dictionaries have no order
-  
-  func testDictionary() {
-    var fruitArray: [String] = ["Apple", "Orange", "Banana", "Apple"]
-    var fruitSet: Set<String> = ["Apple", "Orange", "Banana", "Apple"]
+final class DictionaryTests: XCTestCase {  // XCTestCase is the class used for unit testing
+
+    // Dictionary keys must be unique
+    // Dictionaries have no order
     
-    XCTAssertEqual(fruitArray.count, 4)
-    XCTAssertEqual(fruitSet.count, 3) // Second apple not counted
-    
-    var firstDictionary: [String : Bool] = ["Apple": true, "Orange": false, "Banana": true]
-    let item = firstDictionary["Orange"] // item is an optional bool
-    let noitem = firstDictionary["Pear"] // returns nil for non-existent key, unlike an array which would error out
-    XCTAssertEqual(item, false)
-    
-    // Add to dictionary
-    firstDictionary["Pear"] = true
-    XCTAssertEqual(firstDictionary["Pear"]!, true)
-    
-    // Remove from dictionary
-    firstDictionary.removeValue(forKey: "Pear")
-    
-    struct SomeModel {
-      let id: String
-      let value: String
-      let count: Int
+    func testCreateDictionary() {
+        var ages = [String: Int]()  // Empty dict, so specify types
+        ages["Fred"] = 44
+        
+        let grades1 = ["science": "C", "math": "A"] // Infers types since we're giving it values
+        let grades2: [String: String] = ["science": "C", "math": "A"] // Use type annotation to be explicit of key/value types
+        
+        // With Dicts, for a given key, we don't know if there will be a value, so it returns optional
+        // Can use a default to handle keys without values
+        XCTAssertEqual(grades1["math", default: "Unknown"], "A")
+        XCTAssertEqual(grades2["reading", default: "Unknown"], "Unknown") // no "reading" key, so return default
+        XCTAssertNil(grades2["reading"]) // returns nil for non-existent key with no default; an array would error out
     }
     
-    var someArray: [SomeModel] = [
-      SomeModel(id: "car", value: "Ford", count: 2),
-      SomeModel(id: "truck", value: "Toyota", count: 1),
-      SomeModel(id: "suv", value: "Honda", count: 3),
-    ]
-    let truckFromArray = someArray[1]
+    func testCount() {
+        let grades = ["science": "C", "math": "A"]
+        XCTAssertEqual(grades.count, 2)
+    }
     
-    var someDict: [Int : SomeModel] = [
-      1 : SomeModel(id: "car", value: "Ford", count: 2),
-      2 : SomeModel(id: "truck", value: "Toyota", count: 1),
-      3 : SomeModel(id: "suv", value: "Honda", count: 3),
-    ]
-    let truckFromDict = someDict[2]
+    func testAddRemove() {
+        var ages = ["fred": 44]
+        XCTAssertEqual(ages.count, 1)
+        ages["jim"] = 22
+        ages["jim"] = 33 // overwrite
+        XCTAssertEqual(ages.count, 2)
+        ages.removeValue(forKey: "fred")
+        XCTAssertEqual(ages.count, 1)
+        ages.removeAll()
+        XCTAssertEqual(ages.count, 0)
+    }
     
-  }
+    func testDictOfCustomType() {
+        struct Address {
+            let city: String
+            let state: String
+        }
+
+        let addresses: [String: Address] = [
+            "tim": Address(city: "Denver", state: "CO"),
+            "mary": Address(city: "St Paul", state: "MN"),
+            "tom": Address(city: "Los Angeles", state: "CA")
+        ]
+        let address = addresses["tom"]
+        XCTAssertEqual(address?.city, "Los Angeles")
+    }
 }
