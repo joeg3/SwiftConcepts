@@ -48,4 +48,14 @@ final class EnumsTests: XCTestCase {
         XCTAssertEqual(TempUnit.celsius.abbreviation, "C")
         
     }
+    
+    func testComparingEnums() {
+        enum Sizes: Comparable { // Use Comparable
+            case small
+            case medium
+            case large
+        }
+        
+        XCTAssertTrue(Sizes.small < Sizes.large) // Statement is true because small comes before large in enum case list
+    }
 }
